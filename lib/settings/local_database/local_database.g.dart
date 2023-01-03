@@ -3,10 +3,10 @@
 part of 'local_database.dart';
 
 // ignore_for_file: type=lint
-class UserData extends DataClass implements Insertable<UserData> {
+class UserLocalData extends DataClass implements Insertable<UserLocalData> {
   final int id;
   final String name;
-  const UserData({required this.id, required this.name});
+  const UserLocalData({required this.id, required this.name});
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
     final map = <String, Expression>{};
@@ -15,17 +15,17 @@ class UserData extends DataClass implements Insertable<UserData> {
     return map;
   }
 
-  UserCompanion toCompanion(bool nullToAbsent) {
-    return UserCompanion(
+  UserLocalCompanion toCompanion(bool nullToAbsent) {
+    return UserLocalCompanion(
       id: Value(id),
       name: Value(name),
     );
   }
 
-  factory UserData.fromJson(Map<String, dynamic> json,
+  factory UserLocalData.fromJson(Map<String, dynamic> json,
       {ValueSerializer? serializer}) {
     serializer ??= driftRuntimeOptions.defaultSerializer;
-    return UserData(
+    return UserLocalData(
       id: serializer.fromJson<int>(json['id']),
       name: serializer.fromJson<String>(json['name']),
     );
@@ -39,13 +39,13 @@ class UserData extends DataClass implements Insertable<UserData> {
     };
   }
 
-  UserData copyWith({int? id, String? name}) => UserData(
+  UserLocalData copyWith({int? id, String? name}) => UserLocalData(
         id: id ?? this.id,
         name: name ?? this.name,
       );
   @override
   String toString() {
-    return (StringBuffer('UserData(')
+    return (StringBuffer('UserLocalData(')
           ..write('id: $id, ')
           ..write('name: $name')
           ..write(')'))
@@ -57,21 +57,23 @@ class UserData extends DataClass implements Insertable<UserData> {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      (other is UserData && other.id == this.id && other.name == this.name);
+      (other is UserLocalData &&
+          other.id == this.id &&
+          other.name == this.name);
 }
 
-class UserCompanion extends UpdateCompanion<UserData> {
+class UserLocalCompanion extends UpdateCompanion<UserLocalData> {
   final Value<int> id;
   final Value<String> name;
-  const UserCompanion({
+  const UserLocalCompanion({
     this.id = const Value.absent(),
     this.name = const Value.absent(),
   });
-  UserCompanion.insert({
+  UserLocalCompanion.insert({
     this.id = const Value.absent(),
     required String name,
   }) : name = Value(name);
-  static Insertable<UserData> custom({
+  static Insertable<UserLocalData> custom({
     Expression<int>? id,
     Expression<String>? name,
   }) {
@@ -81,8 +83,8 @@ class UserCompanion extends UpdateCompanion<UserData> {
     });
   }
 
-  UserCompanion copyWith({Value<int>? id, Value<String>? name}) {
-    return UserCompanion(
+  UserLocalCompanion copyWith({Value<int>? id, Value<String>? name}) {
+    return UserLocalCompanion(
       id: id ?? this.id,
       name: name ?? this.name,
     );
@@ -102,7 +104,7 @@ class UserCompanion extends UpdateCompanion<UserData> {
 
   @override
   String toString() {
-    return (StringBuffer('UserCompanion(')
+    return (StringBuffer('UserLocalCompanion(')
           ..write('id: $id, ')
           ..write('name: $name')
           ..write(')'))
@@ -110,11 +112,12 @@ class UserCompanion extends UpdateCompanion<UserData> {
   }
 }
 
-class $UserTable extends User with TableInfo<$UserTable, UserData> {
+class $UserLocalTable extends UserLocal
+    with TableInfo<$UserLocalTable, UserLocalData> {
   @override
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
-  $UserTable(this.attachedDatabase, [this._alias]);
+  $UserLocalTable(this.attachedDatabase, [this._alias]);
   static const VerificationMeta _idMeta = const VerificationMeta('id');
   @override
   late final GeneratedColumn<int> id = GeneratedColumn<int>(
@@ -135,11 +138,11 @@ class $UserTable extends User with TableInfo<$UserTable, UserData> {
   @override
   List<GeneratedColumn> get $columns => [id, name];
   @override
-  String get aliasedName => _alias ?? 'user';
+  String get aliasedName => _alias ?? 'user_local';
   @override
-  String get actualTableName => 'user';
+  String get actualTableName => 'user_local';
   @override
-  VerificationContext validateIntegrity(Insertable<UserData> instance,
+  VerificationContext validateIntegrity(Insertable<UserLocalData> instance,
       {bool isInserting = false}) {
     final context = VerificationContext();
     final data = instance.toColumns(true);
@@ -158,9 +161,9 @@ class $UserTable extends User with TableInfo<$UserTable, UserData> {
   @override
   Set<GeneratedColumn> get $primaryKey => {id};
   @override
-  UserData map(Map<String, dynamic> data, {String? tablePrefix}) {
+  UserLocalData map(Map<String, dynamic> data, {String? tablePrefix}) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
-    return UserData(
+    return UserLocalData(
       id: attachedDatabase.typeMapping
           .read(DriftSqlType.int, data['${effectivePrefix}id'])!,
       name: attachedDatabase.typeMapping
@@ -169,17 +172,17 @@ class $UserTable extends User with TableInfo<$UserTable, UserData> {
   }
 
   @override
-  $UserTable createAlias(String alias) {
-    return $UserTable(attachedDatabase, alias);
+  $UserLocalTable createAlias(String alias) {
+    return $UserLocalTable(attachedDatabase, alias);
   }
 }
 
 abstract class _$LocalDatabase extends GeneratedDatabase {
   _$LocalDatabase(QueryExecutor e) : super(e);
-  late final $UserTable user = $UserTable(this);
+  late final $UserLocalTable userLocal = $UserLocalTable(this);
   @override
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
   @override
-  List<DatabaseSchemaEntity> get allSchemaEntities => [user];
+  List<DatabaseSchemaEntity> get allSchemaEntities => [userLocal];
 }
