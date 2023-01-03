@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '/routing/router.dart';
+import '/routes/router.dart';
 import '/themes/basic.theme.dart';
 
 class App extends StatelessWidget {
