@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '/app.dart';
-import '/themes/basic.theme.dart';
+import '/settings/themes/basic.theme.dart';
 
 void main(List<String> args) {
   WidgetsFlutterBinding.ensureInitialized();
