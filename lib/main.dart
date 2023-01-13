@@ -8,7 +8,7 @@ void main(List<String> args) {
 
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
-      systemNavigationBarColor: Colors.white,
+      systemNavigationBarColor: Colors.black,
       statusBarColor: primaryColorShades,
     ),
   );
