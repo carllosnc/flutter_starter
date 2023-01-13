@@ -24,7 +24,7 @@ update splash screen
 flutter pub run flutter_native_splash:create
 ```
 
-migration database
+running build runner
 ```
 flutter pub run build_runner build --delete-conflicting-outputs
 ```
