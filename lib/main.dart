@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import '/app.dart';
-import '/core/themes/basic.theme.dart';
 
 void main(List<String> args) {
   WidgetsFlutterBinding.ensureInitialized();
@@ -9,7 +8,7 @@ void main(List<String> args) {
   SystemChrome.setSystemUIOverlayStyle(
     const SystemUiOverlayStyle(
       systemNavigationBarColor: Colors.black,
-      statusBarColor: primaryColorShades,
+      statusBarColor: Colors.transparent,
     ),
   );
 

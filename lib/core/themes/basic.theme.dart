@@ -1,21 +1,5 @@
 import 'package:flutter/material.dart';
 
-const MaterialColor primaryColorShades = MaterialColor(
-  0xFF0052F2,
-  <int, Color>{
-    50: Color(0xFFE2F3FF),
-    100: Color(0xFFBED2FF),
-    200: Color(0xFF90ACFF),
-    300: Color(0xFF658AFF),
-    400: Color(0xFF3E6DFF),
-    500: Color(0xFF0052F2),
-    600: Color(0xFF0049E8),
-    700: Color(0xFF003FD9),
-    800: Color(0xFF0034CD),
-    900: Color(0xFF001BB3),
-  },
-);
-
 class ProjectText {
   static TextStyle text = const TextStyle(
     fontSize: 16,
@@ -30,35 +14,72 @@ class ProjectText {
   );
 }
 
-var basicTheme = ThemeData(
+const lightColorScheme = ColorScheme(
   brightness: Brightness.light,
-  primarySwatch: primaryColorShades,
-  scaffoldBackgroundColor: Colors.grey.shade200,
-  cardTheme: CardTheme(
-    elevation: 2,
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.circular(8),
-    ),
-    color: Colors.white,
-  ),
-  appBarTheme: const AppBarTheme(elevation: 0),
-  elevatedButtonTheme: ElevatedButtonThemeData(
-    style: ElevatedButton.styleFrom(
-      elevation: 0,
-      textStyle: const TextStyle(
-        fontWeight: FontWeight.normal,
-        fontSize: 18,
-      ),
-      padding: const EdgeInsets.fromLTRB(20, 14, 20, 14),
-      shape: const StadiumBorder(),
-    ),
-  ),
-  inputDecorationTheme: InputDecorationTheme(
-    iconColor: Colors.grey.shade400,
-    fillColor: Colors.black,
-    border: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(10),
-    ),
-    contentPadding: const EdgeInsets.fromLTRB(20, 14, 20, 14),
-  ),
+  primary: Color(0xFF006B5E),
+  onPrimary: Color(0xFFFFFFFF),
+  primaryContainer: Color(0xFF72F8E2),
+  onPrimaryContainer: Color(0xFF00201B),
+  secondary: Color(0xFF4A635E),
+  onSecondary: Color(0xFFFFFFFF),
+  secondaryContainer: Color(0xFFCDE8E1),
+  onSecondaryContainer: Color(0xFF06201B),
+  tertiary: Color(0xFF446179),
+  onTertiary: Color(0xFFFFFFFF),
+  tertiaryContainer: Color(0xFFCAE6FF),
+  onTertiaryContainer: Color(0xFF001E30),
+  error: Color(0xFFBA1A1A),
+  errorContainer: Color(0xFFFFDAD6),
+  onError: Color(0xFFFFFFFF),
+  onErrorContainer: Color(0xFF410002),
+  background: Color(0xFFFAFDFA),
+  onBackground: Color(0xFF191C1B),
+  surface: Color(0xFFFAFDFA),
+  onSurface: Color(0xFF191C1B),
+  surfaceVariant: Color(0xFFDAE5E1),
+  onSurfaceVariant: Color(0xFF3F4946),
+  outline: Color(0xFF6F7976),
+  onInverseSurface: Color(0xFFEFF1EF),
+  inverseSurface: Color(0xFF2D3130),
+  inversePrimary: Color(0xFF52DBC6),
+  shadow: Color(0xFF000000),
+  surfaceTint: Color(0xFF006B5E),
+  outlineVariant: Color(0xFFBEC9C5),
+  scrim: Color(0xFF000000),
 );
+
+const darkColorScheme = ColorScheme(
+  brightness: Brightness.dark,
+  primary: Color(0xFF52DBC6),
+  onPrimary: Color(0xFF003730),
+  primaryContainer: Color(0xFF005046),
+  onPrimaryContainer: Color(0xFF72F8E2),
+  secondary: Color(0xFFB1CCC5),
+  onSecondary: Color(0xFF1C3530),
+  secondaryContainer: Color(0xFF334B46),
+  onSecondaryContainer: Color(0xFFCDE8E1),
+  tertiary: Color(0xFFACCAE5),
+  onTertiary: Color(0xFF133348),
+  tertiaryContainer: Color(0xFF2C4A60),
+  onTertiaryContainer: Color(0xFFCAE6FF),
+  error: Color(0xFFFFB4AB),
+  errorContainer: Color(0xFF93000A),
+  onError: Color(0xFF690005),
+  onErrorContainer: Color(0xFFFFDAD6),
+  background: Color(0xFF191C1B),
+  onBackground: Color(0xFFE0E3E1),
+  surface: Color(0xFF191C1B),
+  onSurface: Color(0xFFE0E3E1),
+  surfaceVariant: Color(0xFF3F4946),
+  onSurfaceVariant: Color(0xFFBEC9C5),
+  outline: Color(0xFF899390),
+  onInverseSurface: Color(0xFF191C1B),
+  inverseSurface: Color(0xFFE0E3E1),
+  inversePrimary: Color(0xFF006B5E),
+  shadow: Color(0xFF000000),
+  surfaceTint: Color(0xFF52DBC6),
+  outlineVariant: Color(0xFF3F4946),
+  scrim: Color(0xFF000000),
+);
+
+var basicTheme = ThemeData(useMaterial3: true, colorScheme: lightColorScheme);
