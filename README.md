@@ -2,10 +2,14 @@
 
 > flutter starter project
 
-### What's inside
+### Pachages
 
 - Drift Database
 - Go Router
+- JSON Serializable
+- Validatorless
+- Flutter launcher icons
+- Flutter native splash
 
 ### Commands
 
