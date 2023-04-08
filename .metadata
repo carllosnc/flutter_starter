@@ -4,8 +4,8 @@
 # This file should be version controlled.
 
 version:
-  revision: 239f80ed6cbe6a3486dc77ac4b168e3aa8564dfa
-  channel: master
+  revision: 4b12645012342076800eb701bcdfe18f87da21cf
+  channel: stable
 
 project_type: app
 
@@ -13,26 +13,11 @@ project_type: app
 migration:
   platforms:
     - platform: root
-      create_revision: 239f80ed6cbe6a3486dc77ac4b168e3aa8564dfa
-      base_revision: 239f80ed6cbe6a3486dc77ac4b168e3aa8564dfa
+      create_revision: 4b12645012342076800eb701bcdfe18f87da21cf
+      base_revision: 4b12645012342076800eb701bcdfe18f87da21cf
     - platform: android
-      create_revision: 239f80ed6cbe6a3486dc77ac4b168e3aa8564dfa
-      base_revision: 239f80ed6cbe6a3486dc77ac4b168e3aa8564dfa
-    - platform: ios
-      create_revision: 239f80ed6cbe6a3486dc77ac4b168e3aa8564dfa
-      base_revision: 239f80ed6cbe6a3486dc77ac4b168e3aa8564dfa
-    - platform: linux
-      create_revision: 239f80ed6cbe6a3486dc77ac4b168e3aa8564dfa
-      base_revision: 239f80ed6cbe6a3486dc77ac4b168e3aa8564dfa
-    - platform: macos
-      create_revision: 239f80ed6cbe6a3486dc77ac4b168e3aa8564dfa
-      base_revision: 239f80ed6cbe6a3486dc77ac4b168e3aa8564dfa
-    - platform: web
-      create_revision: 239f80ed6cbe6a3486dc77ac4b168e3aa8564dfa
-      base_revision: 239f80ed6cbe6a3486dc77ac4b168e3aa8564dfa
-    - platform: windows
-      create_revision: 239f80ed6cbe6a3486dc77ac4b168e3aa8564dfa
-      base_revision: 239f80ed6cbe6a3486dc77ac4b168e3aa8564dfa
+      create_revision: 4b12645012342076800eb701bcdfe18f87da21cf
+      base_revision: 4b12645012342076800eb701bcdfe18f87da21cf
 
   # User provided section
 
@@ -41,5 +26,5 @@ migration:
   #
   # Files that are not part of the templates will be ignored by default.
   unmanaged_files:
-    - 'lib/main.dart'
-    - 'ios/Runner.xcodeproj/project.pbxproj'
+    - "lib/main.dart"
+    - "ios/Runner.xcodeproj/project.pbxproj"
