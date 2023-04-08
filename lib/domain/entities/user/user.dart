@@ -1,21 +1,41 @@
-import 'package:flutter_starter/domain/entities/address/address.dart';
-import 'package:json_annotation/json_annotation.dart';
-
-part 'user.g.dart';
-
-@JsonSerializable(explicitToJson: true)
 class User {
+  final String id;
   final String name;
   final String email;
-  final Address address;
 
   User({
-    required this.address,
+    required this.id,
     required this.name,
     required this.email,
   });
 
-  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+  //serialize
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'name': name,
+      'email': email,
+    };
+  }
 
-  Map<String, dynamic> toJson() => _$UserToJson(this);
+  //deserialize
+  factory User.fromJson(Map<String, dynamic> map) {
+    return User(
+      id: map['id'],
+      name: map['name'],
+      email: map['email'],
+    );
+  }
+
+  User copyWith({
+    String? id,
+    String? name,
+    String? email,
+  }) {
+    return User(
+      id: id ?? this.id,
+      name: name ?? this.name,
+      email: email ?? this.email,
+    );
+  }
 }
