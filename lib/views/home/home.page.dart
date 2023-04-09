@@ -15,10 +15,7 @@ class _HomePageState extends State<HomePage> {
         title: const Text('Flutter Starter'),
       ),
       body: const Center(
-        child: Text(
-          '🍎',
-          style: TextStyle(fontSize: 50),
-        ),
+        child: Text('🍎', style: TextStyle(fontSize: 50)),
       ),
     );
   }
