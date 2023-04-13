@@ -1,6 +1,6 @@
-import '/domain/domain.dart';
+import 'package:http/http.dart' as http;
 
 abstract class UserRepositoryContract {
-  Future<List<User>> getUsers();
-  Future<User> getUser({required int id});
+  Future<http.Response> getUsers();
+  Future<http.Response> getUser({required int id});
 }
