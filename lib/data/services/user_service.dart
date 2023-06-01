@@ -1,8 +1,12 @@
 import '/data/data.dart';
 import '/domain/domain.dart';
+import 'package:http/http.dart' as http;
 
 class UserService {
-  final UserRepository _userRepository = UserRepository();
+  final UserRepository _userRepository = UserRepository(
+    httpClient: http.Client(),
+  );
+
   final UserAdapter _userAdapter = UserAdapter();
 
   Future<List<User>> getUsers() async {

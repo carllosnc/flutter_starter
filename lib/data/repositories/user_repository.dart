@@ -1,8 +1,15 @@
-import '/domain/domain.dart';
 import 'package:http/http.dart' as http;
+
+import '/domain/domain.dart';
 
 class UserRepository implements UserRepositoryContract {
   static const String _baseUrl = 'https://jsonplaceholder.typicode.com';
+
+  http.Client httpClient;
+
+  UserRepository({
+    required this.httpClient,
+  });
 
   @override
   Future<http.Response> getUsers() async {
