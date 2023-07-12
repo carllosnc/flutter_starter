@@ -1,2 +1,1 @@
-export './repositories/user_repository.dart';
-export './services/user_service.dart';
+export 'repositories/repository_base.dart';
