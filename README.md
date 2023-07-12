@@ -24,7 +24,7 @@
 - **domain**: entities, contracts
 - **components**: shared widgets
 - **views**: frontend for features
-- **test**: unit, widgets, integrations
+- **test**: units
 
 ### Commands
 
