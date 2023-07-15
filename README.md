@@ -1,10 +1,5 @@
 # Flutter Starter
 
-### What's inside
-
-- HTTP
-- Go Route
-
 ### Layers
 
 ```
@@ -28,13 +23,23 @@
 
 ### Commands
 
-Build Runner
+Build runner
 ```
 flutter pub run build_runner build --delete-conflicting-outputs
+```
+
+Launcher icon
+```
+flutter pub run flutter_launcher_icons
+```
+
+Spash
+```
+dart run flutter_native_splash:create
 ```
 
 ---
 
 ### License
 
-MIT © [C4co](https://github.com/C4co)
+MIT © [Carlos Costa](https://github.com/C4co)
