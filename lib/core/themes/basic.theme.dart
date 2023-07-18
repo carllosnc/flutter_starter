@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-var mainTheme = ThemeData(
-  useMaterial3: true,
-  colorSchemeSeed: Colors.red,
-  fontFamily: 'SFProDisplay',
-);
+appTheme({required bool isLight}) => ThemeData(
+      useMaterial3: true,
+      brightness: isLight ? Brightness.light : Brightness.dark,
+      colorSchemeSeed: Colors.red,
+      fontFamily: 'SFProDisplay',
+    );
