@@ -39,7 +39,7 @@ class _SettingsPageState extends State<SettingsPage> {
               ),
               onChanged: (bool value) {
                 setState(() {
-                  _themeNotifier.lightTheme.value = value;
+                  _themeNotifier.setLightTheme(value);
                   _lightTheme = value;
                 });
               },
