@@ -53,7 +53,7 @@ flutter_native_splash:
     #image: assets/android12splash.png
 
     # Splash screen background color.
-    #color: "#42a5f5"
+    color: "#000000"
 
     # App icon background color.
     #icon_background_color: "#111111"
