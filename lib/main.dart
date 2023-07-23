@@ -5,7 +5,7 @@ import '/core/core.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await loadPreferences();
+  await SharedPrefs().loadPreferences();
 
   runApp(const App());
 }
