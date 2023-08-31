@@ -1,5 +1,11 @@
 # Flutter Starter
 
+
+[![Flutter Starter](https://github.com/C4co/flutter_starter/actions/workflows/dart.yml/badge.svg)](https://github.com/C4co/flutter_starter/actions/workflows/dart.yml)
+
+
+### Clone
+
 ```
 gh repo clone C4co/flutter_starter app_name
 ```
@@ -12,18 +18,17 @@ gh repo clone C4co/flutter_starter app_name
 ├──📁 core
 ├──📁 data
 ├──📁 domain
-├──📁 views
+├──📁 notifiers
+├──📁 pages
 📂 tests
-├──📁 integration_tests
-├──📁 unit_tests
-├──📁 widget_tests
 ```
-- **core**: routes, themes, extras
+- **components**: shared widgets
+- **core**: routes, themes, extras, preferences
 - **data**: repositories, services
 - **domain**: entities, contracts
-- **components**: shared widgets
-- **views**: frontend for features
-- **test**: units
+- **notifiers**: global states
+- **pages**: apo pages
+- **test**: units, widget tests
 
 ### Commands
 
