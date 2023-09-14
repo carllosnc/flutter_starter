@@ -1,8 +1,8 @@
 # Flutter Starter
 
+>My own flutter project starter
 
 [![Flutter Starter](https://github.com/C4co/flutter_starter/actions/workflows/dart.yml/badge.svg)](https://github.com/C4co/flutter_starter/actions/workflows/dart.yml)
-
 
 ### Clone
 
@@ -12,16 +12,6 @@ gh repo clone C4co/flutter_starter app_name
 
 ### Layers
 
-```
-📂 lib
-├──📁 components
-├──📁 core
-├──📁 data
-├──📁 domain
-├──📁 notifiers
-├──📁 pages
-📂 tests
-```
 - **components**: shared widgets
 - **core**: routes, themes, extras, preferences
 - **data**: repositories, services
@@ -29,6 +19,7 @@ gh repo clone C4co/flutter_starter app_name
 - **notifiers**: global states
 - **pages**: apo pages
 - **test**: units, widget tests
+- **imports**: all imports
 
 ### Commands
 
