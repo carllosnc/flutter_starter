@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '/core/core.dart';
+import '/imports/app.dart';
 
 class Welcome extends StatelessWidget {
   final Function onPressed;
