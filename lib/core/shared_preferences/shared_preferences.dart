@@ -1,5 +1,5 @@
 import 'package:shared_preferences/shared_preferences.dart';
-import '/notifiers/notifiers.dart';
+import '/imports/app.dart';
 
 class SharedPrefs {
   static final SharedPrefs _sharedPrefs = SharedPrefs._internal();

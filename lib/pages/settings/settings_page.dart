@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '/notifiers/notifiers.dart';
+import '/imports/app.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
