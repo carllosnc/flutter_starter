@@ -21,6 +21,14 @@ gh repo clone C4co/flutter_starter app_name
 - **test**: units, widget tests
 - **imports**: all imports
 
+## What's inside
+
+- go routes
+- json serialize
+- shared preferences
+- font_awesome_flutter
+- intl
+
 ## Commands
 
 Build runner
