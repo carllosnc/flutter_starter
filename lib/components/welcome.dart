@@ -17,24 +17,37 @@ class Welcome extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        child: const Center(
-          child: Text(
-            'Flutter starter',
-            style: TextStyle(
-              fontSize: 30,
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(30, 0, 30, 30),
+          child: SizedBox(
+            width: double.infinity,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                const Text(
+                  'Welcome to flutter starter',
+                  style: TextStyle(
+                    fontSize: 25,
+                    color: Colors.white,
+                  ),
+                ),
+                const SizedBox(height: 20),
+                SizedBox(
+                  width: double.infinity,
+                  child: FilledButton(
+                    onPressed: () {
+                      SharedPrefs().prefs.setBool('welcome', false);
+                      onPressed();
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.grey[900],
+                    ),
+                    child: const Text("Let's go!"),
+                  ),
+                )
+              ],
             ),
           ),
-        ),
-      ),
-      bottomNavigationBar: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
-        child: FilledButton(
-          onPressed: () {
-            SharedPrefs().prefs.setBool('welcome', false);
-
-            onPressed();
-          },
-          child: const Text('Start'),
         ),
       ),
     );
