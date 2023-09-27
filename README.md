@@ -4,13 +4,13 @@
 
 [![Flutter Starter](https://github.com/C4co/flutter_starter/actions/workflows/dart.yml/badge.svg)](https://github.com/C4co/flutter_starter/actions/workflows/dart.yml)
 
-### Clone
+## Clone
 
 ```
 gh repo clone C4co/flutter_starter app_name
 ```
 
-### Layers
+## Layers
 
 - **components**: shared widgets
 - **core**: routes, themes, extras, preferences
@@ -21,7 +21,7 @@ gh repo clone C4co/flutter_starter app_name
 - **test**: units, widget tests
 - **imports**: all imports
 
-### Commands
+## Commands
 
 Build runner
 ```
@@ -40,6 +40,6 @@ dart run flutter_native_splash:create
 
 ---
 
-### License
+## License
 
 MIT © [Carlos Costa](https://github.com/C4co)
