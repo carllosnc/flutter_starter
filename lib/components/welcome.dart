@@ -25,7 +25,7 @@ class Welcome extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 const Text(
-                  'Welcome to flutter starter',
+                  'Welcome to Flutter starter',
                   style: TextStyle(
                     fontSize: 25,
                     color: Colors.white,
