@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import '/core/core.dart';
-import 'notifiers/theme_notifier.dart';
+import 'imports/app.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -8,7 +7,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ValueListenableBuilder(
-      valueListenable: ThemeNotifier().lightTheme,
+      valueListenable: themeGlobal.lightTheme,
       builder: (BuildContext context, bool value, child) {
         return MaterialApp.router(
           theme: appTheme(isLight: value),

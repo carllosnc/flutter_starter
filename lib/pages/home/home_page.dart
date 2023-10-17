@@ -10,7 +10,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  bool firstTime = SharedPrefs().prefs.getBool('welcome') ?? true;
+  bool firstTime = sharedPreferences.prefs.getBool('welcome') ?? true;
 
   @override
   Widget build(BuildContext context) {

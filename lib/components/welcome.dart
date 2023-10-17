@@ -36,7 +36,7 @@ class Welcome extends StatelessWidget {
                   width: double.infinity,
                   child: FilledButton(
                     onPressed: () {
-                      SharedPrefs().prefs.setBool('welcome', false);
+                      sharedPreferences.prefs.setBool('welcome', false);
                       onPressed();
                     },
                     style: ElevatedButton.styleFrom(
