@@ -6,15 +6,10 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ValueListenableBuilder(
-      valueListenable: themeGlobal.lightTheme,
-      builder: (BuildContext context, bool value, child) {
-        return MaterialApp.router(
-          theme: appTheme(isLight: value),
-          debugShowCheckedModeBanner: false,
-          routerConfig: router,
-        );
-      },
+    return MaterialApp.router(
+      theme: lightTheme(),
+      debugShowCheckedModeBanner: false,
+      routerConfig: router,
     );
   }
 }
