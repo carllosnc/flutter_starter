@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import '/imports/app.dart';
+import '/imports.dart';
 
 bool firstTime = sharedPreferences.prefs.getBool('welcome') ?? true;
 
