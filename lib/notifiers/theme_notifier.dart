@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class _ThemeGlobal {
+class _ThemeNotifier {
   ValueNotifier<bool> lightTheme = ValueNotifier<bool>(true);
 
   setLightTheme(bool value) async {
@@ -13,4 +13,4 @@ class _ThemeGlobal {
   }
 }
 
-var themeGlobal = _ThemeGlobal();
+var themeNotifier = _ThemeNotifier();

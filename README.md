@@ -16,7 +16,7 @@ gh repo clone C4co/flutter_starter app_name
 - **core**: routes, themes, extras, preferences
 - **data**: repositories, services
 - **domain**: entities, contracts
-- **globals**: global states
+- **notifiers**: global states
 - **pages**: apo pages
 - **test**: units, widget tests
 

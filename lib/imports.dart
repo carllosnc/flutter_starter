@@ -9,8 +9,8 @@ export './core/shared_preferences/shared_preferences.dart';
 export './core/extensions/color_extension.dart';
 export './core/constants/assets.dart';
 
-//globals
-export './globals/theme_global.dart';
+//notifiers
+export './notifiers/theme_notifier.dart';
 
 //data
 export './data/repositories/repository_base.dart';
