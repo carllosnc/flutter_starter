@@ -1,6 +1,6 @@
 # Flutter Starter
 
->My own flutter project starter
+>Opinated Flutter starter template
 
 [![Flutter Starter](https://github.com/C4co/flutter_starter/actions/workflows/dart.yml/badge.svg)](https://github.com/C4co/flutter_starter/actions/workflows/dart.yml)
 
@@ -17,7 +17,7 @@ gh repo clone C4co/flutter_starter app_name
 - **data**: repositories, services
 - **domain**: entities, contracts
 - **notifiers**: global states
-- **pages**: apo pages
+- **pages**: app pages, features
 - **test**: units, widget tests
 
 ## What's inside
