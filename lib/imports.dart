@@ -1,9 +1,10 @@
 //pages
-export 'pages/home_page.dart';
-export 'pages/welcome_page.dart';
+export './pages/home_page.dart';
+export './pages/welcome_page.dart';
+export './pages/settings_page.dart';
 
 //core
-export './core/themes/basic.theme.dart';
+export './core/theme/app_theme.dart';
 export './core/routes/router.dart';
 export './core/shared_preferences/shared_preferences.dart';
 export './core/extensions/color_extension.dart';

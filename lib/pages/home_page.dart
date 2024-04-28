@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fluentui_system_icons/fluentui_system_icons.dart';
+import 'package:go_router/go_router.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -8,9 +10,20 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Flutter Starter'),
+        actions: [
+          IconButton(
+            icon: const Icon(FluentIcons.settings_24_regular),
+            onPressed: () {
+              context.push('/settings');
+            },
+          ),
+        ],
       ),
       body: const Center(
-        child: Text('🍎', style: TextStyle(fontSize: 50)),
+        child: Text(
+          '🍎',
+          style: TextStyle(fontSize: 50),
+        ),
       ),
     );
   }
