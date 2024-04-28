@@ -6,7 +6,7 @@ export './pages/settings_page.dart';
 //core
 export './core/theme/app_theme.dart';
 export './core/routes/router.dart';
-export './core/shared_preferences/shared_preferences.dart';
+export './core/externals/shared_preferences.dart';
 export './core/extensions/color_extension.dart';
 export './core/constants/assets.dart';
 

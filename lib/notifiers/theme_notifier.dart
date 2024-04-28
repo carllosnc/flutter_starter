@@ -1,15 +1,16 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import '/imports.dart';
 
 class _ThemeNotifier {
   ValueNotifier<bool> lightTheme = ValueNotifier<bool>(true);
 
   setLightTheme(bool value) async {
-    lightTheme.value = value;
+    log("setLightTheme $value");
 
-    //set to shared preferences
-    final SharedPreferences prefs = await SharedPreferences.getInstance();
-    prefs.setBool('lightTheme', value);
+    lightTheme.value = value;
+    sharedPreferences.prefs.setBool('lightTheme', value);
   }
 }
 
