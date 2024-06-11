@@ -2,7 +2,7 @@
 
 >Opinated Flutter starter template
 
-[![Flutter Starter](https://github.com/C4co/flutter_starter/actions/workflows/dart.yml/badge.svg)](https://github.com/C4co/flutter_starter/actions/workflows/dart.yml)
+[![Flutter Starter](https://github.com/carllosnc/flutter_starter/actions/workflows/dart.yml/badge.svg)](https://github.com/carllosnc/flutter_starter/actions/workflows/dart.yml)
 
 ## Clone
 
@@ -49,4 +49,4 @@ dart run flutter_native_splash:create
 
 ## License
 
-MIT © [Carlos Costa](https://github.com/C4co)
+MIT © [Carlos Costa](https://github.com/carllosnc)
