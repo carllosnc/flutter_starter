@@ -20,9 +20,15 @@ class HomePage extends StatelessWidget {
         ],
       ),
       body: const Center(
-        child: Text(
-          '🍎',
-          style: TextStyle(fontSize: 50),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              '🔥',
+              style: TextStyle(fontSize: 100),
+            ),
+          ],
         ),
       ),
     );

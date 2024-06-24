@@ -8,8 +8,7 @@ class _SharedPrefs {
     prefs = await SharedPreferences.getInstance();
     final bool? lightTheme = prefs.getBool('lightTheme');
 
-    //default valur to theme
-    themeNotifier.setLightTheme(lightTheme ?? true);
+    themeState.setLightTheme(lightTheme ?? true);
   }
 }
 

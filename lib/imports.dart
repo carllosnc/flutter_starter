@@ -1,17 +1,17 @@
-//pages
-export './pages/home_page.dart';
-export './pages/welcome_page.dart';
-export './pages/settings_page.dart';
+//features
+export './features/home_page.dart';
+export './features/welcome_page.dart';
+export './features/settings_page.dart';
 
 //core
-export './core/theme/app_theme.dart';
 export './core/routes/router.dart';
 export './core/externals/shared_preferences.dart';
 export './core/extensions/color_extension.dart';
-export './core/constants/assets.dart';
+export '/core/extensions/build_context.dart';
 
-//notifiers
-export './notifiers/theme_notifier.dart';
+//shared states
+export './shared_states/shared_states.dart';
+export './shared_states/theme_state.dart';
 
 //data
 export './data/repositories/repository_base.dart';

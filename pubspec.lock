@@ -801,10 +801,10 @@ packages:
     description:
       path: "."
       ref: HEAD
-      resolved-ref: "852ea3ed089bf9654aff19c93eae98fa14928301"
-      url: "https://github.com/C4co/vw.git"
+      resolved-ref: c6701bd19c16a6d2ca7a577b0813a7eb767f432a
+      url: "https://github.com/carllosnc/vw.git"
     source: git
-    version: "0.0.12"
+    version: "0.0.13"
   watcher:
     dependency: transitive
     description:

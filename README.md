@@ -1,6 +1,6 @@
 # Flutter Starter
 
->Opinated Flutter starter template
+>Template for my own projects
 
 [![Flutter Starter](https://github.com/carllosnc/flutter_starter/actions/workflows/dart.yml/badge.svg)](https://github.com/carllosnc/flutter_starter/actions/workflows/dart.yml)
 
@@ -9,16 +9,6 @@
 ```
 gh repo clone C4co/flutter_starter app_name
 ```
-
-## Layers
-
-- **components**: shared widgets
-- **core**: routes, themes, extras, preferences
-- **data**: repositories, services
-- **domain**: entities, contracts
-- **notifiers**: global states
-- **pages**: app pages, features
-- **test**: units, widget tests
 
 ## What's inside
 
@@ -35,12 +25,12 @@ Build runner
 dart run build_runner build --delete-conflicting-outputs
 ```
 
-Launcher icon
+Generate app icon
 ```
 dart run flutter_launcher_icons
 ```
 
-Spash
+Generate splash screen
 ```
 dart run flutter_native_splash:create
 ```
