@@ -13,18 +13,15 @@ class _SettingsPageState extends State<SettingsPage> with SharedState {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Settings",
-          style: TextStyle(fontSize: 18),
-        ),
+        title: "Settings".pageTitle,
       ),
       body: ListView(
         children: [
           ListTile(
-            title: Text(themeState.lightTheme ? "Light theme" : "Dark theme"),
+            title: themeState.lightTheme ? "Light theme".label : "Dark theme".label,
             trailing: Switch(
               value: themeState.lightTheme,
-              thumbIcon: MaterialStateProperty.all(
+              thumbIcon: WidgetStateProperty.all(
                 Icon(
                   themeState.lightTheme //
                       ? Icons.light_mode
