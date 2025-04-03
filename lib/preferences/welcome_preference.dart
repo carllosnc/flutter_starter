@@ -5,7 +5,7 @@ class WelcomePreference {
 
   static init() {
     RP.initValue(
-      init: () => RP.prefs.setBool(key, false),
+      init: () => RP.prefs.setBool(key, true),
       current: () => RP.prefs.getBool(key),
     );
   }
