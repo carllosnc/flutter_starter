@@ -43,6 +43,9 @@ dependencies:
   vw:
     git:
       url: https://github.com/carllosnc/vw.git
+  reactive_preferences:
+    git:
+      url: https://github.com/carllosnc/reactive_preferences.git
   fluentui_system_icons: ^1.1.236
 
 dev_dependencies:
