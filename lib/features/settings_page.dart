@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reactive_preferences/rp_mixin.dart';
 import '/imports.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -8,7 +9,7 @@ class SettingsPage extends StatefulWidget {
   State<SettingsPage> createState() => _SettingsPageState();
 }
 
-class _SettingsPageState extends State<SettingsPage> with SharedState {
+class _SettingsPageState extends State<SettingsPage> with RPMixin {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,21 +19,21 @@ class _SettingsPageState extends State<SettingsPage> with SharedState {
       body: ListView(
         children: [
           ListTile(
-            title: themeState.lightTheme ? "Light theme".label : "Dark theme".label,
+            title: ThemePreference.value ? "Light theme".label : "Dark theme".label,
             trailing: Switch(
-              value: themeState.lightTheme,
+              value: ThemePreference.value,
               thumbIcon: WidgetStateProperty.all(
                 Icon(
-                  themeState.lightTheme //
+                  ThemePreference.value //
                       ? Icons.light_mode
                       : Icons.dark_mode,
-                  color: themeState.lightTheme //
+                  color: ThemePreference.value //
                       ? Theme.of(context).colorScheme.primary
                       : Theme.of(context).colorScheme.onPrimary,
                 ),
               ),
               onChanged: (value) {
-                themeState.setLightTheme(value);
+                ThemePreference.toggleTheme(value);
               },
             ),
           ),
