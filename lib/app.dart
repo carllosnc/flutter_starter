@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reactive_preferences/rp_mixin.dart';
 import '/imports.dart';
 
 class App extends StatefulWidget {
@@ -8,13 +9,13 @@ class App extends StatefulWidget {
   State<App> createState() => _AppState();
 }
 
-class _AppState extends State<App> with SharedState {
+class _AppState extends State<App> with RPMixin {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
       theme: ThemeData(
         useMaterial3: true,
-        brightness: themeState.lightTheme ? Brightness.light : Brightness.dark,
+        brightness: ThemePreference.value ? Brightness.light : Brightness.dark,
         colorSchemeSeed: context.primaryColor,
         fontFamily: 'SFProDisplay',
         bottomSheetTheme: const BottomSheetThemeData(
