@@ -28,7 +28,7 @@ class WelcomePage extends StatelessWidget {
               20.gapVertical,
               200.width(
                 "Start".button(() {
-                  sharedPreferences.prefs.setBool('welcome', false);
+                  WelcomePreference.firstTime();
                   context.go('/home');
                 }),
               ),
