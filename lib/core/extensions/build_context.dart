@@ -5,5 +5,5 @@ extension AppColorsContext on BuildContext {
 }
 
 extension AppAssetsContext on BuildContext {
-  String get welcomentBackgroundImage => "assets/images/welcome.png";
+  String get welcomeBackgroundImage => "assets/images/welcome.png";
 }

@@ -13,7 +13,7 @@ class WelcomePage extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage(context.welcomentBackgroundImage),
+            image: AssetImage(context.welcomeBackgroundImage),
             fit: BoxFit.cover,
           ),
         ),
