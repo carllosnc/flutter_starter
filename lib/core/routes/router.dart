@@ -1,11 +1,9 @@
 import 'package:go_router/go_router.dart';
 import '/imports.dart';
 
-bool firstTime = sharedPreferences.prefs.getBool('welcome') ?? true;
-
 final router = GoRouter(
   routes: [
-    if (firstTime)
+    if (WelcomePreference.value)
       GoRoute(
         path: '/',
         builder: (context, state) {
@@ -13,7 +11,7 @@ final router = GoRouter(
         },
       ),
     GoRoute(
-      path: firstTime ? '/home' : '/',
+      path: WelcomePreference.value ? '/home' : '/',
       builder: (context, state) {
         return const HomePage();
       },
