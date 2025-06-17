@@ -10,6 +10,7 @@ extension TextComponent on String {
 
   Text get pageTitle => Text(this,
       style: const TextStyle(
+        fontWeight: FontWeight.normal,
         fontSize: 18,
       ));
 

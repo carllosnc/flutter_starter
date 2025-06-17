@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:vw/vw.dart';
 import '/imports.dart';
 
 class WelcomePage extends StatelessWidget {
@@ -9,23 +8,20 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      extendBody: true,
-      body: Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(context.welcomeBackgroundImage),
-            fit: BoxFit.cover,
+      appBar: AppBar(),
+      body: SizedBox(
+        width: double.infinity,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 20,
+            vertical: 70,
           ),
-        ),
-        child: SizedBox(
-          width: double.infinity,
-          child: VWColumn(
-            padding: const EdgeInsets.fromLTRB(30, 0, 30, 30),
-            verticalAlignment: MainAxisAlignment.end,
-            horizontalAlignment: CrossAxisAlignment.center,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            spacing: 20,
             children: [
               "Flutter Starter".welcomeTitle,
-              20.gapVertical,
               200.width(
                 "Start".button(() {
                   WelcomePreference.firstTime();
