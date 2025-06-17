@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:reactive_preferences/rp_mixin.dart';
 import '/imports.dart';
 
@@ -12,6 +13,9 @@ class SettingsPage extends StatefulWidget {
 class _SettingsPageState extends State<SettingsPage> with RPMixin {
   @override
   Widget build(BuildContext context) {
+    var brightness = SchedulerBinding.instance.platformDispatcher.platformBrightness;
+    bool isDarkMode = brightness == Brightness.dark;
+
     return Scaffold(
       appBar: AppBar(
         title: "Settings".pageTitle,
