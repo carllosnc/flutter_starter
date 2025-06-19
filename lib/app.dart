@@ -15,7 +15,6 @@ class _AppState extends State<App> with RPMixin {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       theme: ThemePreference.value ? fabricConfig.getLightTheme() : fabricConfig.getDarkTheme(),
-      darkTheme: ThemePreference.value ? fabricConfig.getDarkTheme() : fabricConfig.getLightTheme(),
       debugShowCheckedModeBanner: false,
       routerConfig: router,
     );
