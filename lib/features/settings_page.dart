@@ -13,8 +13,12 @@ class SettingsPage extends StatefulWidget {
 class _SettingsPageState extends State<SettingsPage> with RPMixin {
   @override
   Widget build(BuildContext context) {
-    var brightness = SchedulerBinding.instance.platformDispatcher.platformBrightness;
-    bool isDarkMode = brightness == Brightness.dark;
+    var dispatcher = SchedulerBinding.instance.platformDispatcher;
+
+    dispatcher.onPlatformBrightnessChanged = () {
+      var brightness = dispatcher.platformBrightness;
+      ThemePreference.toggleTheme(brightness == Brightness.light);
+    };
 
     return Scaffold(
       appBar: AppBar(
@@ -22,24 +26,22 @@ class _SettingsPageState extends State<SettingsPage> with RPMixin {
       ),
       body: ListView(
         children: [
-          ListTile(
-            title: ThemePreference.value ? "Light theme".label : "Dark theme".label,
-            trailing: Switch(
-              value: ThemePreference.value,
-              thumbIcon: WidgetStateProperty.all(
-                Icon(
-                  ThemePreference.value //
-                      ? Icons.light_mode
-                      : Icons.dark_mode,
-                  color: ThemePreference.value //
-                      ? Theme.of(context).colorScheme.primary
-                      : Theme.of(context).colorScheme.onPrimary,
-                ),
+          SwitchListTile(
+            title: (ThemePreference.value) ? "Light theme".label : "Dark theme".label,
+            value: ThemePreference.value,
+            thumbIcon: WidgetStateProperty.all(
+              Icon(
+                ThemePreference.value //
+                    ? Icons.light_mode
+                    : Icons.dark_mode,
+                color: ThemePreference.value //
+                    ? Theme.of(context).colorScheme.primary
+                    : Theme.of(context).colorScheme.onPrimary,
               ),
-              onChanged: (value) {
-                ThemePreference.toggleTheme(value);
-              },
             ),
+            onChanged: (value) {
+              ThemePreference.toggleTheme(value);
+            },
           ),
         ],
       ),
